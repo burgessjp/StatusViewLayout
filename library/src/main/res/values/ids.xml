@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="btn_reload" type="id" />
+    <item name="tv_empty" type="id" />
+    <item name="tv_error" type="id" />
+    <item name="tv_loading" type="id" />
+    <item name="tv_no_network" type="id" />
+</resources>

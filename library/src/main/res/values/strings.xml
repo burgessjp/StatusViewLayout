@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Library</string>
+
+    <string name="loading_text">数据加载中</string>
+    <string name="error_text">加载过程中发生错误</string>
+    <string name="empty_text">数据为空</string>
+    <string name="net_exception_text">请检查你的网络设置</string>
+    <string name="retry_text">重新加载</string>
+</resources>

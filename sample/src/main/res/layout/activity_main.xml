@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_show_loading"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:text="show loading"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/btn_show_error"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:text="show error"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/btn_show_no_network"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:text="show no network"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/btn_show_empty"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:text="show empty"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/btn_show_content"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:text="show content"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <me.solidev.statusview.StatusViewLayout
+        android:id="@+id/status_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/loading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#c1c1c1"
+            android:gravity="center"
+            android:text="我是内容视图"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+
+    </me.solidev.statusview.StatusViewLayout>
+</LinearLayout>
