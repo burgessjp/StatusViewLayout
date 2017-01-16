@@ -8,7 +8,7 @@
     <ImageView
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:src="@drawable/icon_status_empty" />
+        android:src="@drawable/icon_status_view_empty" />
 
     <TextView
         android:id="@id/tv_empty"

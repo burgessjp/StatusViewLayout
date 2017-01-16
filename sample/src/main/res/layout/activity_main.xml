@@ -58,7 +58,7 @@
             android:textSize="12sp" />
     </LinearLayout>
 
-    <me.solidev.statusview.StatusViewLayout
+    <me.solidev.statusviewlayout.StatusViewLayout
         android:id="@+id/status_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -73,5 +73,5 @@
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
 
-    </me.solidev.statusview.StatusViewLayout>
+    </me.solidev.statusviewlayout.StatusViewLayout>
 </LinearLayout>

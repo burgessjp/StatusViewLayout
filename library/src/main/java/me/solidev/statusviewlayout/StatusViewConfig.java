@@ -1,8 +1,5 @@
-package me.solidev.statusview;
+package me.solidev.statusviewlayout;
 
-import android.support.annotation.LayoutRes;
-
-import me.solidev.library.R;
 
 /**
  * Created by _SOLID
@@ -13,26 +10,22 @@ import me.solidev.library.R;
 
 public class StatusViewConfig {
     static StatusViewConfig config = new StatusViewConfig();
-    @LayoutRes
     int loadingResId = R.layout.status_view_layout_loading;
-    @LayoutRes
     int errorResId = R.layout.status_view_layout_error;
-    @LayoutRes
     int emptyResId = R.layout.status_view_layout_empty;
-    @LayoutRes
     int noNetWorkResId = R.layout.status_view_layout_error_no_network;
 
-    public static StatusViewConfig loadingResId(@LayoutRes int loadingResId) {
+    public static StatusViewConfig loadingResId(int loadingResId) {
         config.loadingResId = loadingResId;
         return config;
     }
 
-    public static StatusViewConfig errorResId(@LayoutRes int errorResId) {
+    public static StatusViewConfig errorResId(int errorResId) {
         config.errorResId = errorResId;
         return config;
     }
 
-    public static StatusViewConfig emptyResId(@LayoutRes int emptyResId) {
+    public static StatusViewConfig emptyResId(int emptyResId) {
         config.emptyResId = emptyResId;
         return config;
     }

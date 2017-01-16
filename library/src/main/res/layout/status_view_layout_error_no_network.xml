@@ -9,7 +9,7 @@
     <ImageView
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:src="@drawable/icon_status_no_network" />
+        android:src="@drawable/icon_status_view_no_network" />
 
     <TextView
         android:id="@id/tv_no_network"

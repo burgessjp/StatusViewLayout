@@ -1,4 +1,4 @@
-package me.solidev.statusview;
+package me.solidev.statusviewlayout;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -10,7 +10,6 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
-import me.solidev.library.R;
 
 /**
  * Created by _SOLID

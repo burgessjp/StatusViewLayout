@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
-import me.solidev.statusview.StatusViewLayout;
+import me.solidev.statusviewlayout.StatusViewLayout;
 
 public class MainActivity extends AppCompatActivity {
 

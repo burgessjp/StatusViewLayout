@@ -19,7 +19,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:background="@drawable/selector_retry"
+        android:background="@drawable/selector_status_view_retry"
         android:padding="10dp"
         android:text="重新加载"
         android:textColor="@color/status_view_retry_color"
