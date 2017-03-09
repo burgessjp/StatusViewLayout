@@ -1,13 +1,12 @@
 package solid.ren.statusview;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
 import me.solidev.statusviewlayout.StatusViewLayout;
 
-public class MainActivity extends AppCompatActivity {
+public class NormalActivity extends BaseMenuActivity {
 
 
     private StatusViewLayout mStatusView;
@@ -15,8 +14,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
+        setContentView(R.layout.activity_normal);
+        setTitle("Normal");
         setupView();
     }
 
@@ -63,6 +62,4 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
-
 }

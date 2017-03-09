@@ -2,11 +2,11 @@ apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'com.jfrog.bintray'
 
 
-def prjVersion = "0.1.0-beta1"
+def prjVersion = "0.2.0"
 def prjGroup = "me.solidev.library"
 def prjName = "StatusViewLayout"
 def prjArtifactId = "status-view-layout"
-def prjDescription = "A library for manage view's status"
+def prjDescription = "library for manage view's status"
 def siteUrl = 'https://github.com/burgessjp/StatusViewLayout'      // 项目的主页
 def gitUrl = 'https://github.com/burgessjp/StatusViewLayout.git'   // Git仓库的url
 def pckName = "StatusViewLayout"
