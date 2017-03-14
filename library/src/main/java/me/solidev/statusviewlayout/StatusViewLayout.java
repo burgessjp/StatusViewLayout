@@ -79,7 +79,7 @@ public class StatusViewLayout extends FrameLayout {
 
         tv_loading = (TextView) mLoadingView.findViewById(R.id.tv_loading);
         tv_empty = (TextView) mEmptyView.findViewById(R.id.tv_empty);
-        tv_error = (TextView) mEmptyView.findViewById(R.id.tv_error);
+        tv_error = (TextView) mErrorView.findViewById(R.id.tv_error);
 
         addView(mLoadingView, mLayoutParams);
         addView(mErrorView, mLayoutParams);
