@@ -2,7 +2,7 @@ apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'com.jfrog.bintray'
 
 
-def prjVersion = "0.3.1"
+def prjVersion = "0.3.2"
 def prjGroup = "me.solidev.library"
 def prjName = "StatusViewLayout"
 def prjArtifactId = "status-view-layout"
