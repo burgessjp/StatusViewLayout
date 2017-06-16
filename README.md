@@ -2,13 +2,17 @@
 
 An library can very easily manage view's status.
 
-###Download
+### Download
  ```html
   compile 'me.solidev.library:status-view-layout:latestVersion'
  ```
-###Capture
+### Capture
 
  <img src="capture/loading.png" width = "40%" />
  <img src="capture/error.png" width = "40%" />
  <img src="capture/no_net.png" width = "40%" />
  <img src="capture/empty.png" width = "40%" />
+
+### Usage
+
+see sample project
