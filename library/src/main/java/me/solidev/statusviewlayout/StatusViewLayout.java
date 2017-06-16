@@ -77,17 +77,17 @@ public class StatusViewLayout extends FrameLayout {
         mNoNetWorkView = LayoutInflater.from(getContext()).inflate(noNetWorkResId, null);
 
 
-        tv_loading = (TextView) mLoadingView.findViewById(R.id.tv_loading);
-        tv_empty = (TextView) mEmptyView.findViewById(R.id.tv_empty);
-        tv_error = (TextView) mErrorView.findViewById(R.id.tv_error);
+        tv_loading = (TextView) mLoadingView.findViewById(R.id.status_view_tv_loading);
+        tv_empty = (TextView) mEmptyView.findViewById(R.id.status_view_tv_empty);
+        tv_error = (TextView) mErrorView.findViewById(R.id.status_view_tv_error);
 
         addView(mLoadingView, mLayoutParams);
         addView(mErrorView, mLayoutParams);
         addView(mEmptyView, mLayoutParams);
         addView(mNoNetWorkView, mLayoutParams);
 
-        View mRetryView = mErrorView.findViewById(R.id.btn_reload);
-        View mRetryViewNoNet = mNoNetWorkView.findViewById(R.id.btn_reload);
+        View mRetryView = mErrorView.findViewById(R.id.status_view_btn_reload);
+        View mRetryViewNoNet = mNoNetWorkView.findViewById(R.id.status_view_btn_reload);
         if (mRetryView != null) {
             mRetryView.setOnClickListener(new OnClickListener() {
                 @Override

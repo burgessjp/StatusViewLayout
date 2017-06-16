@@ -10,18 +10,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:maxWidth="200dp"
-        android:text="@string/error_text"
+        android:text="@string/status_view_error_text"
         android:textColor="@color/status_view_text_color"
         android:textSize="14sp" />
 
     <TextView
-        android:id="@id/btn_reload"
+        android:id="@id/status_view_btn_reload"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:background="@drawable/selector_status_view_retry"
+        android:background="@drawable/status_view_selector_retry"
         android:padding="10dp"
-        android:text="重新加载"
-        android:textColor="@color/status_view_retry_color"
+        android:text="@string/status_view_reload"
+        android:textColor="@color/status_view_retry_text_color"
         android:textSize="14sp" />
 </LinearLayout>

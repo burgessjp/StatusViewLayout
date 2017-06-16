@@ -10,7 +10,7 @@ import android.view.ViewGroup;
  * Created by _SOLID
  * Date:2017/3/9
  * Time:9:38
- * Desc:Very convenient to let  activity and fragment have the state
+ * Desc:Very convenient to let activity and fragment have state
  */
 
 public class StatusHelper {

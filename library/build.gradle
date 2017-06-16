@@ -19,6 +19,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    resourcePrefix 'status_view_'
 }
 
 dependencies {
@@ -27,6 +28,6 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     testCompile 'junit:junit:4.12'
-    provided 'com.android.support:support-fragment:25.2.0'
+    provided 'com.android.support:support-fragment:25.3.1'
 }
 apply from: 'publish.gradle'

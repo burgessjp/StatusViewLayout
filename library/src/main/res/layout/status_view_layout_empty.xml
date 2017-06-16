@@ -8,14 +8,14 @@
     <ImageView
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:src="@drawable/icon_status_view_empty" />
+        android:src="@drawable/status_view_icon_empty" />
 
     <TextView
-        android:id="@id/tv_empty"
+        android:id="@id/status_view_tv_empty"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="@string/empty_text"
+        android:text="@string/status_view_empty_text"
         android:textColor="@color/status_view_text_color"
         android:textSize="16sp" />
 </LinearLayout>
