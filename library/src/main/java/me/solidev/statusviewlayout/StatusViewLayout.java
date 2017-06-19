@@ -22,8 +22,7 @@ public class StatusViewLayout extends FrameLayout {
     private View mErrorView;
     private View mEmptyView;
     private View mNoNetWorkView;
-    private LayoutParams mLayoutParams;
-    private OnClickListener mOnRetryListener;
+
     private TextView tv_loading;
     private TextView tv_empty;
     private TextView tv_error;
@@ -33,6 +32,7 @@ public class StatusViewLayout extends FrameLayout {
     private int emptyResId;
     private int noNetWorkResId;
 
+    private OnClickListener mOnRetryListener;
 
     public StatusViewLayout(Context context) {
         this(context, null);
@@ -68,8 +68,8 @@ public class StatusViewLayout extends FrameLayout {
     }
 
     private void setUpView() {
-        mLayoutParams = new LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-        mLayoutParams.gravity = Gravity.CENTER;
+        LayoutParams layoutParams = new LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        layoutParams.gravity = Gravity.CENTER;
 
         mLoadingView = LayoutInflater.from(getContext()).inflate(loadingResId, null);
         mErrorView = LayoutInflater.from(getContext()).inflate(errorResId, null);
@@ -81,10 +81,10 @@ public class StatusViewLayout extends FrameLayout {
         tv_empty = (TextView) mEmptyView.findViewById(R.id.status_view_tv_empty);
         tv_error = (TextView) mErrorView.findViewById(R.id.status_view_tv_error);
 
-        addView(mLoadingView, mLayoutParams);
-        addView(mErrorView, mLayoutParams);
-        addView(mEmptyView, mLayoutParams);
-        addView(mNoNetWorkView, mLayoutParams);
+        addView(mLoadingView, layoutParams);
+        addView(mErrorView, layoutParams);
+        addView(mEmptyView, layoutParams);
+        addView(mNoNetWorkView, layoutParams);
 
         View mRetryView = mErrorView.findViewById(R.id.status_view_btn_reload);
         View mRetryViewNoNet = mNoNetWorkView.findViewById(R.id.status_view_btn_reload);
