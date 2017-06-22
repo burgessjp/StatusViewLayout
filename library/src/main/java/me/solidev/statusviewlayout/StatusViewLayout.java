@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 
@@ -27,6 +28,11 @@ public class StatusViewLayout extends FrameLayout {
     private TextView tv_loading;
     private TextView tv_empty;
     private TextView tv_error;
+    private TextView tv_no_network;
+
+    private ImageView iv_empty;
+    private ImageView iv_error;
+    private ImageView iv_no_network;
 
     private int loadingResId;
     private int errorResId;
@@ -34,6 +40,7 @@ public class StatusViewLayout extends FrameLayout {
     private int noNetWorkResId;
 
     private OnClickListener mOnRetryListener;
+
 
     public StatusViewLayout(Context context) {
         this(context, null);
@@ -77,10 +84,23 @@ public class StatusViewLayout extends FrameLayout {
         mEmptyView = LayoutInflater.from(getContext()).inflate(emptyResId, null);
         mNoNetWorkView = LayoutInflater.from(getContext()).inflate(noNetWorkResId, null);
 
-
         tv_loading = (TextView) mLoadingView.findViewById(R.id.status_view_tv_loading);
         tv_empty = (TextView) mEmptyView.findViewById(R.id.status_view_tv_empty);
         tv_error = (TextView) mErrorView.findViewById(R.id.status_view_tv_error);
+        tv_no_network = (TextView) mErrorView.findViewById(R.id.status_view_tv_no_network);
+
+        iv_empty = (ImageView) mEmptyView.findViewById(R.id.status_view_iv_empty);
+        iv_error = (ImageView) mErrorView.findViewById(R.id.status_view_iv_error);
+        iv_no_network = (ImageView) mErrorView.findViewById(R.id.status_view_iv_no_network);
+        if (StatusViewConfig.config.emptyDrawable != -1) {
+            setErrorDrawable(StatusViewConfig.config.emptyDrawable);
+        }
+        if (StatusViewConfig.config.errorDrawable != -1) {
+            setEmptyDrawable(StatusViewConfig.config.errorDrawable);
+        }
+        if (StatusViewConfig.config.noNetWorkDrawable != -1) {
+            setNoNetWorkDrawable(StatusViewConfig.config.noNetWorkDrawable);
+        }
 
         addView(mLoadingView, layoutParams);
         addView(mErrorView, layoutParams);
@@ -161,6 +181,12 @@ public class StatusViewLayout extends FrameLayout {
         showEmpty();
     }
 
+    public void showNetWorkException(String noNetWorkText) {
+        if (tv_no_network != null && !TextUtils.isEmpty(noNetWorkText))
+            tv_no_network.setText(noNetWorkText);
+        showNetWorkException();
+    }
+
     public void showNetWorkException() {
         for (int i = 0; i < getChildCount(); i++) {
             getChildAt(i).setVisibility(View.GONE);
@@ -173,5 +199,20 @@ public class StatusViewLayout extends FrameLayout {
             getChildAt(i).setVisibility(View.GONE);
         }
         getChildAt(getChildCount() - 1).setVisibility(View.VISIBLE);
+    }
+
+    public void setErrorDrawable(int errorDrawable) {
+        if (iv_error != null)
+            iv_error.setImageResource(errorDrawable);
+    }
+
+    public void setEmptyDrawable(int emptyDrawable) {
+        if (iv_empty != null)
+            iv_empty.setImageResource(emptyDrawable);
+    }
+
+    public void setNoNetWorkDrawable(int noNetWorkDrawable) {
+        if (iv_no_network != null)
+            iv_no_network.setImageResource(noNetWorkDrawable);
     }
 }

@@ -12,10 +12,8 @@
 
     <TextView
         android:id="@id/status_view_tv_loading"
+        style="@style/status_view_message_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:text="@string/status_view_loading_text"
-        android:textColor="@color/status_view_text_color"
-        android:textSize="16sp" />
+        android:text="@string/status_view_loading_text" />
 </LinearLayout>

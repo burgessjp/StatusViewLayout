@@ -7,17 +7,16 @@
     android:orientation="vertical">
 
     <ImageView
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:id="@id/status_view_iv_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:src="@drawable/status_view_icon_error" />
 
     <TextView
         android:id="@id/status_view_tv_error"
+        style="@style/status_view_message_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/status_view_icon_text_gap"
         android:maxWidth="200dp"
-        android:text="@string/status_view_error_text"
-        android:textColor="@color/status_view_text_color"
-        android:textSize="14sp" />
+        android:text="@string/status_view_error_text" />
 </LinearLayout>

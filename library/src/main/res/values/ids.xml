@@ -5,4 +5,7 @@
     <item name="status_view_tv_error" type="id" />
     <item name="status_view_tv_loading" type="id" />
     <item name="status_view_tv_no_network" type="id" />
+    <item name="status_view_iv_empty" type="id" />
+    <item name="status_view_iv_error" type="id" />
+    <item name="status_view_iv_no_network" type="id" />
 </resources>
