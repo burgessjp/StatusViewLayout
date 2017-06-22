@@ -2,6 +2,7 @@ package me.solidev.statusviewlayout;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -125,7 +126,7 @@ public class StatusViewLayout extends FrameLayout {
     }
 
     public void showLoading(String loadingText) {
-        if (tv_loading != null)
+        if (tv_loading != null && !TextUtils.isEmpty(loadingText))
             tv_loading.setText(loadingText);
         showLoading();
     }
@@ -138,8 +139,12 @@ public class StatusViewLayout extends FrameLayout {
     }
 
     public void showError(String errorText) {
-        if (tv_error != null)
-            tv_error.setText(errorText);
+        if (tv_error != null && !TextUtils.isEmpty(errorText)) {
+            tv_error.setText("");
+            tv_error.append(errorText);
+            tv_error.append(" ");
+            tv_error.append(getContext().getString(R.string.status_view_error_text_click_reload));
+        }
         showError();
     }
 
@@ -151,7 +156,7 @@ public class StatusViewLayout extends FrameLayout {
     }
 
     public void showEmpty(String emptyText) {
-        if (tv_empty != null)
+        if (tv_empty != null && !TextUtils.isEmpty(emptyText))
             tv_empty.setText(emptyText);
         showEmpty();
     }

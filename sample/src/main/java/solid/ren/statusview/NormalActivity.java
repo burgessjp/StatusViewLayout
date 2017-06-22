@@ -37,7 +37,7 @@ public class NormalActivity extends BaseMenuActivity {
         findViewById(R.id.btn_show_error).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mStatusView.showError();
+                mStatusView.showError("错误信息");
             }
         });
         findViewById(R.id.btn_show_empty).setOnClickListener(new View.OnClickListener() {
