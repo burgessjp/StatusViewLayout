@@ -1,6 +1,7 @@
 package solid.ren.statusview;
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Toast;
 
@@ -21,6 +22,8 @@ public class NormalActivity extends BaseMenuActivity {
 
     private void setupView() {
         mStatusView = (StatusViewLayout) findViewById(R.id.status_view);
+        View emptyView= LayoutInflater.from(this).inflate(R.layout.layout_empty_custom,null);
+        mStatusView.setEmptyView(emptyView);
         mStatusView.setOnRetryListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

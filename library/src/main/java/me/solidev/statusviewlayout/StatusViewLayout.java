@@ -40,6 +40,7 @@ public class StatusViewLayout extends FrameLayout {
     private int noNetWorkResId;
 
     private OnClickListener mOnRetryListener;
+    private LayoutParams layoutParams;
 
 
     public StatusViewLayout(Context context) {
@@ -76,7 +77,7 @@ public class StatusViewLayout extends FrameLayout {
     }
 
     private void setUpView() {
-        LayoutParams layoutParams = new LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        layoutParams = new LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         layoutParams.gravity = Gravity.CENTER;
 
         mLoadingView = LayoutInflater.from(getContext()).inflate(loadingResId, null);
@@ -214,5 +215,12 @@ public class StatusViewLayout extends FrameLayout {
     public void setNoNetWorkDrawable(int noNetWorkDrawable) {
         if (iv_no_network != null)
             iv_no_network.setImageResource(noNetWorkDrawable);
+    }
+
+    public void setEmptyView(View emptyView) {
+        removeView(mEmptyView);
+        mEmptyView = emptyView;
+        addView(mEmptyView, getChildCount() - 2, layoutParams);
+        mEmptyView.setVisibility(View.GONE);
     }
 }
