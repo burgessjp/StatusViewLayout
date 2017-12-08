@@ -77,7 +77,7 @@ public class StatusViewLayout extends FrameLayout {
     }
 
     private void setUpView() {
-        layoutParams = new LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        layoutParams = new LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
         layoutParams.gravity = Gravity.CENTER;
 
         mLoadingView = LayoutInflater.from(getContext()).inflate(loadingResId, null);
