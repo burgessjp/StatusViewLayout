@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <item name="status_view_btn_reload" type="id" />
+    <item name="status_view_btn_reload_net" type="id" />
     <item name="status_view_tv_empty" type="id" />
     <item name="status_view_tv_error" type="id" />
     <item name="status_view_tv_loading" type="id" />

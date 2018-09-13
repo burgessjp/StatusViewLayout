@@ -85,14 +85,14 @@ public class StatusViewLayout extends FrameLayout {
         mEmptyView = LayoutInflater.from(getContext()).inflate(emptyResId, null);
         mNoNetWorkView = LayoutInflater.from(getContext()).inflate(noNetWorkResId, null);
 
-        tv_loading = (TextView) mLoadingView.findViewById(R.id.status_view_tv_loading);
-        tv_empty = (TextView) mEmptyView.findViewById(R.id.status_view_tv_empty);
-        tv_error = (TextView) mErrorView.findViewById(R.id.status_view_tv_error);
-        tv_no_network = (TextView) mErrorView.findViewById(R.id.status_view_tv_no_network);
+        tv_loading = mLoadingView.findViewById(R.id.status_view_tv_loading);
+        tv_empty = mEmptyView.findViewById(R.id.status_view_tv_empty);
+        tv_error = mErrorView.findViewById(R.id.status_view_tv_error);
+        tv_no_network = mErrorView.findViewById(R.id.status_view_tv_no_network);
 
-        iv_empty = (ImageView) mEmptyView.findViewById(R.id.status_view_iv_empty);
-        iv_error = (ImageView) mErrorView.findViewById(R.id.status_view_iv_error);
-        iv_no_network = (ImageView) mErrorView.findViewById(R.id.status_view_iv_no_network);
+        iv_empty = mEmptyView.findViewById(R.id.status_view_iv_empty);
+        iv_error = mErrorView.findViewById(R.id.status_view_iv_error);
+        iv_no_network = mErrorView.findViewById(R.id.status_view_iv_no_network);
         if (StatusViewConfig.config.emptyDrawable != -1) {
             setErrorDrawable(StatusViewConfig.config.emptyDrawable);
         }
@@ -109,7 +109,7 @@ public class StatusViewLayout extends FrameLayout {
         addView(mNoNetWorkView, layoutParams);
 
         View mRetryView = mErrorView.findViewById(R.id.status_view_btn_reload);
-        View mRetryViewNoNet = mNoNetWorkView.findViewById(R.id.status_view_btn_reload);
+        View mRetryViewNoNet = mNoNetWorkView.findViewById(R.id.status_view_btn_reload_net);
         if (mRetryView != null) {
             mRetryView.setOnClickListener(new OnClickListener() {
                 @Override
@@ -147,8 +147,9 @@ public class StatusViewLayout extends FrameLayout {
     }
 
     public void showLoading(String loadingText) {
-        if (tv_loading != null && !TextUtils.isEmpty(loadingText))
+        if (tv_loading != null && !TextUtils.isEmpty(loadingText)) {
             tv_loading.setText(loadingText);
+        }
         showLoading();
     }
 
@@ -177,14 +178,16 @@ public class StatusViewLayout extends FrameLayout {
     }
 
     public void showEmpty(String emptyText) {
-        if (tv_empty != null && !TextUtils.isEmpty(emptyText))
+        if (tv_empty != null && !TextUtils.isEmpty(emptyText)) {
             tv_empty.setText(emptyText);
+        }
         showEmpty();
     }
 
     public void showNetWorkException(String noNetWorkText) {
-        if (tv_no_network != null && !TextUtils.isEmpty(noNetWorkText))
+        if (tv_no_network != null && !TextUtils.isEmpty(noNetWorkText)) {
             tv_no_network.setText(noNetWorkText);
+        }
         showNetWorkException();
     }
 
@@ -203,18 +206,21 @@ public class StatusViewLayout extends FrameLayout {
     }
 
     public void setErrorDrawable(int errorDrawable) {
-        if (iv_error != null)
+        if (iv_error != null) {
             iv_error.setImageResource(errorDrawable);
+        }
     }
 
     public void setEmptyDrawable(int emptyDrawable) {
-        if (iv_empty != null)
+        if (iv_empty != null) {
             iv_empty.setImageResource(emptyDrawable);
+        }
     }
 
     public void setNoNetWorkDrawable(int noNetWorkDrawable) {
-        if (iv_no_network != null)
+        if (iv_no_network != null) {
             iv_no_network.setImageResource(noNetWorkDrawable);
+        }
     }
 
     public void setEmptyView(View emptyView) {
