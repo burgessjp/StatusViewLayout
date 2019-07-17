@@ -162,10 +162,7 @@ public class StatusViewLayout extends FrameLayout {
 
     public void showError(String errorText) {
         if (tv_error != null && !TextUtils.isEmpty(errorText)) {
-            tv_error.setText("");
-            tv_error.append(errorText);
-            tv_error.append(" ");
-            tv_error.append(getContext().getString(R.string.status_view_error_text_click_reload));
+            tv_error.setText(errorText);
         }
         showError();
     }

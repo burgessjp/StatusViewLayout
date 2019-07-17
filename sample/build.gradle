@@ -6,7 +6,7 @@ android {
     defaultConfig {
         applicationId "solid.ren.statusview"
         minSdkVersion 14
-        targetSdkVersion 24
+        targetSdkVersion 27
         versionCode 1
         versionName "1.0"
     }
@@ -22,6 +22,6 @@ dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     testImplementation 'junit:junit:4.12'
     implementation 'com.android.support:appcompat-v7:27.1.1'
-    implementation project(':library')
-    //compile 'me.solidev.library:status-view-layout:0.1.0-beta1'
+//    implementation project(':library')
+    implementation 'me.solidev.library:status-view-layout:0.5.6'
 }
